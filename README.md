@@ -5,7 +5,10 @@ Current configuration dotfiles supported:
 
 ```
     vim (.vimrc)
+	vim plugin - YouCompleteMe (.ycm_extra_conf.py)
 	shell (.bashrc)
+	tmux (.tmux.conf.local)
+	
 ```
 
 The .vimrc plugs not compatible with vi.
@@ -65,6 +68,9 @@ If you decide to install more plugins as you type in a new plugin into your .vim
 ```
 
 `:w` saves the file. `:so %` is short for `:source %` which sources the current file. `:PlugInstall` begins the install process.
+
+## YouCompleteMe(ycm)
+Copy (or append) `YouCompleteMe/.ycm_extra_conf.py` to home directory, it currently configures ycm to add auto completion and code analysis on C++20 compatible code.
 
 ## bashrc
 It is recommend to append the contents of the `.bashrc` and `.bash_functions` rather than to copy the files themselves.
