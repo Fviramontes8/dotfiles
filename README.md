@@ -27,8 +27,7 @@ In order to use current .vimrc file with the use of plugins, a plugin manager is
 To use the .vimrc file, copy it to your home directory, below is an example:
 
 ```
-    cd /path/to/dotfiles
-    cp .vimrc ~
+    cp /path/to/dotfiles/vim/.vimrc ~
 ```
 
 To edit the file, go to your home directory (~ or $HOME) and type
@@ -79,4 +78,12 @@ It is recommend to append the contents of the `.bashrc` and `.bash_functions` ra
 ```
 cat /path/to/dotfiles/bash/.bashrc >> ~/.bashrc
 cat /path/to/dotfiles/bash/.bash_functions >> ~/.bash_functions
+```
+
+## Tmux
+The `.tmux.conf.local` is a file that tmux uses to generate the config file (.tmux.conf). It is generally recommended that the `.tmux.conf.local` file is edited rather than the .tmux.conf file.
+
+To install:
+```
+cp /path/to/dotfiles/tmux/.tmux.conf.local ~
 ```
