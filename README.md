@@ -1,13 +1,14 @@
 # dotfiles
 Repo to store current dotfiles
 
-Current dotfiles supported:
+Current configuration dotfiles supported:
 
 ```
     vim (.vimrc)
+	shell (.bashrc)
 ```
 
-If the plugins are used, the .vimrc file is not compatible with vi.
+The .vimrc plugs not compatible with vi.
 
 ## vimrc install prerequisites
 
@@ -64,3 +65,12 @@ If you decide to install more plugins as you type in a new plugin into your .vim
 ```
 
 `:w` saves the file. `:so %` is short for `:source %` which sources the current file. `:PlugInstall` begins the install process.
+
+## bashrc
+It is recommend to append the contents of the `.bashrc` and `.bash_functions` rather than to copy the files themselves.
+
+### Adding applying bash config files to host
+```
+cat /path/to/dotfiles/bash/.bashrc >> ~/.bashrc
+cat /path/to/dotfiles/bash/.bash_functions >> ~/.bash_functions
+```
