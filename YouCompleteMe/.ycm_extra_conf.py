@@ -4,7 +4,9 @@ import ycm_core
 FLAGS = [
     "-x", 
     "c++", 
-    "-std=c++20"
+    "-std=c++2a",
+    "-I", 
+    "/usr/local/include/opencv4",
 ]
 
 SOURCE_EXTENSIONS = [".cpp", ".cxx", ".cc"]
