@@ -1,8 +1,19 @@
+format = """
+$time $username | $all
+"""
+
+add_newline = false
+scan_timeout = 10
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [c]
 format = '\[[$symbol($version(-$name))]($style)\]'
+
+[character]
+#success_symbol = "[❯](bold purple)"
+error_symbol = "[✗](bold red)"
 
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
@@ -27,6 +38,9 @@ format = '\[[$symbol($version)]($style)\]'
 
 [deno]
 format = '\[[$symbol($version)]($style)\]'
+
+[directory]
+truncation_length = 3
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
@@ -144,11 +158,12 @@ format = '\[[$symbol$workspace]($style)\]'
 
 [time]
 time_format = "%R"
-format = '[$time]($style)'
+format = '\[[$time]($style)\]'
+disabled = false
 
 [username]
 show_always = true
-format = '\[[$user]($style)\]|'
+format = '\[[$user]($style)\]'
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
