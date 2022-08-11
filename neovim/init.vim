@@ -152,21 +152,24 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
 " Coc key updates
+" Formatting selected code
+" nmap <leader>f <Plug>(coc-format-selected)
+
 " Enables use of <TAB> to navigate autocomplete
 function! s:check_back_space() abort
-	let col = col('.')-1
-	return !col || getline('.')[col - 1] =~ '\s'
+ 	let col = col('.') - 1
+ 	return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
+" Insert <tab> when previous text is space, refresh completion if not.
+inoremap <silent><expr> <TAB>
+	\ coc#pum#visible() ? coc#pum#next(1):
+	\ <SID>check_back_space() ? "\<Tab>" :
+	\ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-inoremap <silent><expr> <S-Tab>
-			\ pumvisible() ? "\<C-p>" :
-			\ <SID>check_back_space() ? "\<S-TAB>" :
-			\ coc#refresh()
+" Enables <CR> (aka Enter key) to confirm selection for autocompletion
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<CR>"
 
 " Git fugitive remaps
 " Equivalent to 'git status', can use 's' to stage (add) and 'u' to unstage
