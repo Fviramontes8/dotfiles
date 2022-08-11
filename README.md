@@ -88,6 +88,25 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 After this (and copying `init.vim` to `~/.config/nvim/`) the `:PlugInstall` command can be used in the `init.vim` file.
 
+## Coc plugin install
+To install c++ autocompletion:
+
+```
+CocInstall coc-clangd
+```
+
+Rust:
+
+```
+CocInstall coc-rust-analyzer
+```
+
+Python:
+
+```
+CocInstall coc-python
+```
+
 ## YouCompleteMe(ycm)
 Copy (or append) `YouCompleteMe/.ycm_extra_conf.py` to home directory, it currently configures ycm to add auto completion and code analysis on C++20 compatible code.
 
