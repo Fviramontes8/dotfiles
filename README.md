@@ -104,7 +104,7 @@ CocInstall coc-rust-analyzer
 Python:
 
 ```
-CocInstall coc-python
+CocInstall coc-pyright
 ```
 
 ## YouCompleteMe(ycm)
