@@ -60,18 +60,8 @@ set splitright
 set nospell
 
 " :PlugInstall to install plugins
-" From https://github.com/junegunn/vim-plug
-"
-" When installing YouCompleteMe (ycm) run the following linux commands to install
-" 	requisites:
-"
-" 		sudo apt install build-essential cmake vim-nox mono-complete 
-" 		sudo apt install golang nodejs default-jdk npm
-"		cd .vim/plugged/YouCompleteMe/
-"		python3 install.py --all --rust-completer
-"
-" 	If there is an error with npm run this command:
-"		npm config set strict-ssl=false
+" From https://github.com/junegunn/vim-plugs
+
 call plug#begin('~/.vim/plugged')
 
 " Colorschemes
