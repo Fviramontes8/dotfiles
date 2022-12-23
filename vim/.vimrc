@@ -147,6 +147,7 @@ nnoremap <silent> <leader>fi :YcmCompleter FixIt<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_global_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_show_diagnostics_ui = 0
 
 " Git fugitive remaps
 " Equivalent to 'git status', can use 's' to stage (add) and 'u' to unstage
