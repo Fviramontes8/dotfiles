@@ -6,7 +6,9 @@ Current configuration dotfiles supported:
 ```
 vim (.vimrc)
 vim plugin - YouCompleteMe (.ycm_extra_conf.py)
-neovim (init.vim)
+neovim 
+    vimscript version (vimscript)
+    lua version (true_lua)
 shell (.bashrc)
 tmux (.tmux.conf.local)
 starship (starship.toml)
@@ -31,7 +33,7 @@ To use the .vimrc file, copy it to your home directory, below is an example:
 cp /path/to/dotfiles/vim/.vimrc ~
 ```
 
-To edit the file, go to your home directory (~ or $HOME) and type
+To edit the file, go to your home directory (~ or `$HOME`) and type
 
 ```
 vim .vimrc
@@ -79,6 +81,7 @@ cp /path/to/dotfiles/neovim/init.vim ~/.config/nvim/init.vim
 ```
 
 ## Neovim Plugin installation process
+### vimscript version
 The preferred method is the same as vim: using [junegunn's vim-plug plugin manager](https://github.com/junegunn/vim-plug). However, the neovim install command is a little bit different:
 
 ```
@@ -88,7 +91,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 After this (and copying `init.vim` to `~/.config/nvim/`) the `:PlugInstall` command can be used in the `init.vim` file.
 
-## Coc plugin install
+#### Coc plugin install
 To install c++ autocompletion:
 
 ```
@@ -106,6 +109,34 @@ Python:
 ```
 CocInstall coc-pyright
 ```
+
+### lua version
+*Requires neovim v0.8.2 or later*
+
+The following is the folder structure of the neovim configuration
+
+```
+neovim/true_lua/nvim/
+├── after
+│   └── plugin
+│       ├── colors.lua
+│       ├── fugitive.lua
+│       ├── harpoon.lua
+│       ├── lsp.lua
+│       ├── lualine.lua
+│       ├── telescope.lua
+│       ├── treesitter.lua
+│       └── undotree.lua
+├── init.lua
+└── lua
+    └── fenk
+        ├── init.lua
+        ├── packer.lua
+        ├── remap.lua
+        └── set.lua
+
+```
+Understanding this configuration is not trivial and readers should look at `neovim/true_lua/README.md` for more details.
 
 ## YouCompleteMe(ycm)
 Copy (or append) `YouCompleteMe/.ycm_extra_conf.py` to home directory, it currently configures ycm to add auto completion and code analysis on C++20 compatible code.
