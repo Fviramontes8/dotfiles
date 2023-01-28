@@ -1,4 +1,11 @@
 # Setting up neovim via lua
+## Installing packer
+The following is needed to install packer
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 ## Folder structure
 From the home `README.md`, the following is the file structure of the configuration:
 
