@@ -151,11 +151,18 @@ cat /path/to/dotfiles/bash/.bash_functions >> ~/.bash_functions
 ```
 
 ## Tmux
-The `.tmux.conf.local` is a file that tmux uses to generate the config file (.tmux.conf). It is generally recommended that the `.tmux.conf.local` file is edited rather than the .tmux.conf file.
+The `.tmux.conf.local` is a file that tmux uses to generate the config file (.tmux.conf). It is generally recommended that the `.tmux.conf.local` file is edited rather than the .tmux.conf file. However, the `.tmux.conf` file must be linked first.
 
 To install:
 ```
-cp /path/to/dotfiles/tmux/.tmux.conf.local ~
+ln -sf /path/to/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+cp /path/to/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
+```
+
+I also recommend setting the `EDITOR` variable to either `vi` or `emacs` depending on your preference in your `.bashrc`. This is so some of tmux's features can be used with vi keybinds
+
+```
+export EDITOR='vi'
 ```
 
 ## Starship
