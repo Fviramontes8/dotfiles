@@ -9,9 +9,12 @@ vim plugin - YouCompleteMe (.ycm_extra_conf.py)
 neovim 
     vimscript version (vimscript)
     lua version (true_lua)
-shell (.bashrc)
+bash shell (.bashrc)
 tmux (.tmux.conf.local)
 starship (starship.toml)
+clangd (clangd/config.yaml)
+helix (helix/config.toml,
+       helix/languages.toml)
 ```
 
 The .vimrc plugs not compatible with vi.
@@ -187,4 +190,21 @@ eval "$(starship init bash)"
 The config file can should be copied to the `~/.config` folder, below is an example
 ```
 cp /path/to/dotfiles/starship/starship.toml ~/.config
+```
+
+## Clangd
+If the clangd plugin is installed for a text editor used, the following command is recommened to copy the clangd config file:
+```sh
+cp -r /path/to/dotfiles/clangd/ ~/.config/clangd
+```
+
+## Helix text editor
+If the helix text editor is being used, the following command should be used to copy config files to the right config folder:
+```sh
+cp -r /path/to/dotfiles/helix ~/.config/helix
+```
+
+Remember, you should link the run time to the config folder too
+```sh
+ln -s /path/to/helix/install/runtime ~/.config/helix/runtime
 ```
