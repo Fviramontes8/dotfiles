@@ -1,0 +1,12 @@
+theme = "everforest_dark"
+
+[editor]
+auto-completion = true
+auto-format = true
+auto-info = true
+auto-pairs = false
+line-number = "relative"
+rulers = [80]
+
+[editor.lsp]
+display-messages = true

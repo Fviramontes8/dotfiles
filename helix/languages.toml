@@ -1,0 +1,10 @@
+[[language]]
+name = "rust"
+
+[language.config]
+checkOnSave = { command = "clippy" }
+
+[[language]]
+name = "cpp"
+file-types = ["cc", "c++", "cpp", "hpp", "cxx", "hxx", "C", "H"]
+comment-token = "//"
