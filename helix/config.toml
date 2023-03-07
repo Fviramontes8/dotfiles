@@ -1,12 +1,23 @@
-theme = "everforest_dark"
+# theme = "doom_acario_dark"
+# theme = "jellybeans"
+# theme = "mellow"
+# theme = "night_owl"
+theme = "nord"
 
 [editor]
 auto-completion = true
 auto-format = true
 auto-info = true
 auto-pairs = false
+mouse = false
 line-number = "relative"
 rulers = [80]
 
 [editor.lsp]
 display-messages = true
+
+[keys.normal]
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
