@@ -1,3 +1,5 @@
+use-grammars = { except = ["hare"] }
+
 [[language]]
 name = "rust"
 
@@ -6,5 +8,6 @@ checkOnSave = { command = "clippy" }
 
 [[language]]
 name = "cpp"
+auto-format = true
 file-types = ["cc", "c++", "cpp", "hpp", "cxx", "hxx", "C", "H"]
 comment-token = "//"
