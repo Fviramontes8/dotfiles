@@ -43,3 +43,5 @@ vim.opt.splitbelow = true
 -- 	right of the current window
 vim.opt.splitright = true
 
+-- Turn off vim's spell check (I did not know it existed lmao)
+vim.opt.spell = false
