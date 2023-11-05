@@ -35,6 +35,7 @@ function activate_env() {
     PY_ENV_LIST=($(ls "$PY_ENV_HOME"))
     PY_ENV=$(gum choose "${PY_ENV_LIST[@]}")
     source "${PY_ENV_HOME}${PY_ENV}/bin/activate"
+    gum style --foreground 2 --border rounded --padding "0 1" "${PY_ENV} has been activated!"
 }
 
 function gum_commit() {
