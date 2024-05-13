@@ -3,9 +3,6 @@ use-grammars = { except = ["hare"] }
 [[language]]
 name = "rust"
 
-[language.config]
-checkOnSave = { command = "clippy" }
-
 [[language]]
 name = "cpp"
 auto-format = true
