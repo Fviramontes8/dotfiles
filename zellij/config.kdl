@@ -1,0 +1,6 @@
+keybinds {
+	unbind "Ctrl h"
+	normal {
+		bind "Ctrl m" {SwitchToMode "move"; }
+	}
+}
