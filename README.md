@@ -114,7 +114,10 @@ CocInstall coc-pyright
 ```
 
 ### lua version
-*Requires neovim v0.8.2 or later*
+#### Using packer pluging manager
+*PACKER IS DEPRECATED AND SO IS THIS*
+
+*GO TO [HERE](https://github.com/fviramontes8/lazyfenk) FOR UP-TO-DATE NEOVIM SETUP*
 
 The following is the folder structure of the neovim configuration
 
